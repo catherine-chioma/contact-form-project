@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-wrapper">
+        <form action="process_form.php" method="POST" class="contact-form">
+            <h2>Contact Us</h2>
+            
+            <div class="name-container">
+                <div class="form-group">
+                    <label for="firstname">First Name *</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Last Name *</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Query Type *</label>
+                <div class="query-type">
+                    <input type="radio" id="general" name="query_type" value="General Enquiry" required>
+                    <label for="general">General Enquiry</label>
+                    
+                    <input type="radio" id="support" name="query_type" value="Support Request" required>
+                    <label for="support">Support Request</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" placeholder="Your message" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="consent" name="consent" required>
+                    I consent to being contacted by the team *
+                </label>
+            </div>
+            
+            <div class="submit-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
